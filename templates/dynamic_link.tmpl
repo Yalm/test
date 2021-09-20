@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="twitter:card" content="summary_large_image" />
+    {{if.socialTitle}}
+    <title>{{.socialTitle}}</title>
+    <meta property="og:title" content="{{.socialTitle}}" />
+    <meta name="twitter:title" content="{{.socialTitle}}" />
+    {{end}}
+    {{if.socialDescription}}
+    <meta name="description" content="{{.socialDescription}}" />
+    <meta property="og:description" content="{{.socialDescription}}" />
+    <meta name="twitter:description" content="{{.socialDescription}}" />
+    {{end}}
+    {{if.socialImageUrl}}
+    <meta property="og:image" content="{{.socialImageUrl}}" />
+    <meta name="twitter:image" content="{{.socialImageUrl}}" />
+    {{end}}
+    {{if.androidPackageName}}
+    <meta property="al:android:package" content="{{.androidPackageName}}" />
+    {{end}}
+    {{if.androidUrl}}
+    <meta property="al:android:url" content="{{.androidUrl}}" />
+    {{end}}
+    {{if.iosUrl}}
+    <meta property="al:ios:url" content="{{.iosUrl}}" />
+    {{end}}
+    <meta property="al:web:url" content="{{.link}}" />
+    <meta property="al:web:should_fallback" content="false" />
+  </head>
+</html>
